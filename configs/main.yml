@@ -5,7 +5,7 @@ bot_url: "https://t.me/pocket_testbot"
 messages:
   responses:
     start: "Привет! Я Pocket-Bot, помогу тебе сохранять ссылки в твой Pocket-аккаунт. Для начала тебе необходимо дать мне доступ. Для этого переходи по ссылке:\n%s"
-    alredy_authorized: "Ты уже авторизирован. Присылай ссылку, а я ее сохраню."
+    already_authorized: "Ты уже авторизирован. Присылай ссылку, а я ее сохраню."
     saved_successfully: "Ссылка успешно сохранена!"
     unknown_command: "Я не знаю такой команды ("
   errors:

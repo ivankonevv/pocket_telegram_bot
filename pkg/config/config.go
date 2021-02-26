@@ -8,8 +8,8 @@ type Config struct {
 	TelegramToken     string
 	PocketConsumerKey string
 	AuthServerURL     string
-	TelegramBotURL    string `mapstucture:"bot_url"`
-	DBPath            string `mapstucture:"db_file"`
+	TelegramBotURL    string `mapstructure:"bot_url"`
+	DBPath            string `mapstructure:"db_file"`
 
 	Messages Messages
 }
@@ -20,17 +20,17 @@ type Messages struct {
 }
 
 type Errors struct {
-	Default      string `mapstucture:"default"`
-	InvalidURL   string `mapstucture:"invalid_url"`
-	Unauthorized string `mapstucture:"unauthorized"`
-	UnableToSave string `mapstucture:"unable_to_save"`
+	Default      string `mapstructure:"default"`
+	InvalidURL   string `mapstructure:"invalid_url"`
+	Unauthorized string `mapstructure:"unauthorized"`
+	UnableToSave string `mapstructure:"unable_to_save"`
 }
 
 type Responses struct {
-	Start             string `mapstucture:"start"`
-	AlreadyAuthorized string `mapstucture:"alredy_authorized"`
-	SavedSuccessfully string `mapstucture:"saved_successfully"`
-	UnknownCommand    string `mapstucture:"unknown_command"`
+	Start             string `mapstructure:"start"`
+	AlreadyAuthorized string `mapstructure:"already_authorized"`
+	SavedSuccessfully string `mapstructure:"saved_successfully"`
+	UnknownCommand    string `mapstructure:"unknown_command"`
 }
 
 func Init() (*Config, error) {

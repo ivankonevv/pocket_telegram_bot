@@ -36,11 +36,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	tokenRepositry := boltdb.NewTokenRepository(db)
+	tokenRepository := boltdb.NewTokenRepository(db)
 
-	telegramBot := telegram.NewBot(bot, pocketClient, tokenRepositry, cfg.AuthServerURL, cfg.Messages)
+	telegramBot := telegram.NewBot(bot, pocketClient, tokenRepository, cfg.AuthServerURL, cfg.Messages)
 
-	authorizationServer := server.NewAuthorizationServer(pocketClient, tokenRepositry, cfg.TelegramBotURL)
+	authorizationServer := server.NewAuthorizationServer(pocketClient, tokenRepository, cfg.TelegramBotURL)
 
 	go func() {
 		if err := telegramBot.Start(); err != nil {
