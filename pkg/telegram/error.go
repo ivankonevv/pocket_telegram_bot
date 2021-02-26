@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	errInvalidURL = errors.New("url is invalid")
-	errUnautorized = errors.New("user is not authorized")
+	errInvalidURL   = errors.New("url is invalid")
+	errUnauthorized = errors.New("user is not authorized")
 	errUnableToSave = errors.New("unable to save")
 )
 
@@ -17,7 +17,7 @@ func (b *Bot) handleError(chatID int64, err error) {
 	case errInvalidURL:
 		msg.Text = b.messages.InvalidURL
 		b.bot.Send(msg)
-	case errUnautorized:
+	case errUnauthorized:
 		msg.Text = b.messages.Unauthorized
 		b.bot.Send(msg)
 	case errUnableToSave:

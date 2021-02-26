@@ -28,7 +28,7 @@ func (b *Bot) handleMessage(message *tgbotapi.Message) error {
 
 	accessToken, err := b.getAccessToken(message.Chat.ID)
 	if err != nil {
-		return errUnautorized
+		return errUnauthorized
 	}
 
 	if err := b.pocketClient.Add(context.Background(), pocket.AddInput{
