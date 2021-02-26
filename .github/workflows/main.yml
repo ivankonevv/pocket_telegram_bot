@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY: "registry.digitalocean.com/telegram"
   IMAGE_NAME: "pocket-bot"
-  CONTAINER_NAME: "pocket"
+  CONTAINER_NAME: "pocket_bot"
 
 jobs:
   build_and_push:
