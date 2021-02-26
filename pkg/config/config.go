@@ -2,7 +2,6 @@ package config
 
 import (
 	"github.com/spf13/viper"
-	"os"
 )
 
 type Config struct {
@@ -63,9 +62,6 @@ func Init() (*Config, error) {
 }
 
 func ParseEnv(cfg *Config) error {
-	os.Setenv("TOKEN", "1524930274:AAFxKfwe-zHo87cVC_I3WN3h5ooVm4wJKR0")
-	os.Setenv("CONSUMER_KEY", "95960-a3af6bbd52ed0e3638ecb8b1")
-	os.Setenv("AUTH_SERVER_URL", "http://localhost/")
 	if err := viper.BindEnv("token"); err != nil {
 		return err
 	}
